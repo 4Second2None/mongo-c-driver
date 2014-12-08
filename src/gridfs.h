@@ -127,6 +127,11 @@ MONGO_EXPORT int gridfs_store_buffer( gridfs *gfs, const char *data, gridfs_offs
  *
  *  @return - MONGO_OK or MONGO_ERROR.
  */
+ 
+MONGO_EXPORT int gridfs_store_buffer2( gridfs *gfs, const char *data, gridfs_offset length,
+                          const char *remotename,
+                          const char *contenttype , const char * objid );
+                          
 MONGO_EXPORT int gridfs_store_file( gridfs *gfs, const char *filename,
                         const char *remotename, const char *contenttype );
 
